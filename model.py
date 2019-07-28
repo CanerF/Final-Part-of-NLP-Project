@@ -71,9 +71,9 @@ print("**************************Second part of the process*********************
 
 rfc = RandomForestClassifier(n_estimators=20, random_state=0)
 
-train_x,test_x,train_y,test_y = train_test_split(clear_data.drop('Category',axis=1),clear_data.Category,test_size =0.2)
 
-rfc.fit(train_x,train_y)
+
+rfc.fit(clear_data.drop('Category', axis = 1), clear_data.Category)
 
 del final_data_frame['Category']
 
